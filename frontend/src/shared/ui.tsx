@@ -1,5 +1,5 @@
 import type { ButtonHTMLAttributes, ReactNode } from 'react';
-import { useState } from 'react';
+import { useEffect, useLayoutEffect, useRef, useState } from 'react';
 
 export function cx(...parts: Array<string | false | null | undefined>): string {
   return parts.filter(Boolean).join(' ');
@@ -24,6 +24,86 @@ export function Button({ tone = 'primary', className, type = 'button', ...props 
   return <button type={type} className={buttonClass(tone, className)} {...props} />;
 }
 
+function HintBubble({ id, hint }: { id: string; hint: string }) {
+  const [open, setOpen] = useState(false);
+  const [above, setAbove] = useState(false);
+  const rootRef = useRef<HTMLSpanElement>(null);
+  const buttonRef = useRef<HTMLButtonElement>(null);
+  const bubbleRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (!open) return;
+    function onPointerDown(event: PointerEvent) {
+      if (!rootRef.current?.contains(event.target as Node)) {
+        setOpen(false);
+      }
+    }
+    function onKeyDown(event: KeyboardEvent) {
+      if (event.key === 'Escape') setOpen(false);
+    }
+    document.addEventListener('pointerdown', onPointerDown);
+    document.addEventListener('keydown', onKeyDown);
+    return () => {
+      document.removeEventListener('pointerdown', onPointerDown);
+      document.removeEventListener('keydown', onKeyDown);
+    };
+  }, [open]);
+
+  useLayoutEffect(() => {
+    if (!open) return;
+    const button = buttonRef.current;
+    const bubble = bubbleRef.current;
+    if (!button || !bubble) return;
+    const anchor = button.getBoundingClientRect();
+    const spaceBelow = window.innerHeight - anchor.bottom;
+    const spaceAbove = anchor.top;
+    setAbove(spaceBelow < bubble.offsetHeight + 16 && spaceAbove > spaceBelow);
+  }, [open, hint]);
+
+  return (
+    <span ref={rootRef} className={cx('relative shrink-0', open && 'z-[1]')}>
+      <button
+        ref={buttonRef}
+        type="button"
+        aria-expanded={open}
+        aria-controls={`${id}-hint`}
+        onClick={() => setOpen((value) => !value)}
+        className={cx(
+          'grid h-5 w-5 cursor-pointer place-items-center rounded-full border text-xs',
+          open
+            ? 'border-accent bg-accent text-accent-ink'
+            : 'border-line bg-card text-muted hover:border-accent/50 hover:text-ink',
+        )}
+      >
+        ?
+      </button>
+      {open ? (
+        <div
+          ref={bubbleRef}
+          id={`${id}-hint`}
+          role="note"
+          onClick={() => setOpen(false)}
+          className={cx(
+            'absolute right-0 z-[1] w-80 max-w-[min(22rem,calc(100vw-2rem))] cursor-pointer',
+            above ? 'bottom-full mb-2' : 'top-full mt-2',
+          )}
+        >
+          <span
+            aria-hidden
+            className={cx(
+              'pointer-events-none absolute right-1 size-3 rotate-45 border-accent bg-card',
+              above ? '-bottom-[5px] border-r-2 border-b-2' : '-top-[5px] border-t-2 border-l-2',
+            )}
+          />
+          <div className="max-h-[min(24rem,calc(100vh-5rem))] overflow-x-hidden overflow-y-auto rounded-2xl border-2 border-accent bg-card px-3.5 py-3 text-left text-sm leading-relaxed text-ink shadow-[0_12px_32px_rgba(28,25,22,0.16)]">
+            {hint}
+          </div>
+        </div>
+      ) : null}
+    </span>
+  );
+}
+
 export function Field({
   id,
   label,
@@ -35,32 +115,15 @@ export function Field({
   hint?: string;
   children: ReactNode;
 }) {
-  const [open, setOpen] = useState(false);
-
   return (
     <div className="grid gap-1.5">
-      <div className="flex items-center justify-between gap-2">
+      <div className="flex items-start justify-between gap-2">
         <label htmlFor={id} className="text-sm font-medium text-ink">
           {label}
         </label>
-        {hint ? (
-          <button
-            type="button"
-            aria-expanded={open}
-            aria-controls={`${id}-hint`}
-            onClick={() => setOpen((value) => !value)}
-            className="grid h-5 w-5 place-items-center rounded-full border border-line text-xs text-muted hover:text-ink"
-          >
-            ?
-          </button>
-        ) : null}
+        {hint ? <HintBubble id={id} hint={hint} /> : null}
       </div>
       {children}
-      {open && hint ? (
-        <p id={`${id}-hint`} className="text-xs leading-relaxed text-muted">
-          {hint}
-        </p>
-      ) : null}
     </div>
   );
 }
