@@ -7,6 +7,7 @@ __pycache__/
 .pytest_cache/
 *.py[cod]
 .codegraph/
+codegraph.json
 .cursor/
 local/
 .env
