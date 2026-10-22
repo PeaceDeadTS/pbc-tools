@@ -34,6 +34,11 @@ function Loading() {
   return <p className="text-sm text-muted">{t('loading')}</p>;
 }
 
+const wikis = [
+  { href: 'https://pbc.xxx/', label: 'pbc.xxx' },
+  { href: 'https://pornbasedata.com/', label: 'pornbasedata.com' },
+] as const;
+
 export function Shell() {
   const { t, i18n } = useTranslation('shell');
   const { pathname } = useLocation();
@@ -57,12 +62,27 @@ export function Shell() {
   return (
     <div className="min-h-screen bg-paper text-ink">
       <header className="sticky top-0 z-10 border-b border-line bg-card/95 backdrop-blur-sm">
-        <div className="mx-auto flex max-w-[100rem] items-center justify-between gap-4 px-4 py-3">
-          <Link to="/" className="flex items-baseline gap-3">
+        <div className="mx-auto flex max-w-[100rem] flex-wrap items-center justify-between gap-x-4 gap-y-2 px-4 py-3">
+          <Link to="/" className="flex shrink-0 items-baseline gap-3 whitespace-nowrap">
             <span className="text-lg font-semibold tracking-tight">{t('brand')}</span>
             <span className="hidden text-sm text-muted sm:inline">{t('tagline')}</span>
           </Link>
-          <LanguageSelect />
+          <div className="flex flex-wrap items-center justify-end gap-x-4 gap-y-2">
+            <nav aria-label={t('wikis')} className="flex items-center gap-3 text-sm">
+              {wikis.map((wiki) => (
+                <a
+                  key={wiki.href}
+                  href={wiki.href}
+                  className="text-muted underline decoration-line underline-offset-4 hover:text-ink"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  {wiki.label}
+                </a>
+              ))}
+            </nav>
+            <LanguageSelect />
+          </div>
         </div>
         <nav className="mx-auto flex max-w-[100rem] gap-1 overflow-x-auto px-4" aria-label={t('brand')}>
           {toolRoutes.map((item) => (
