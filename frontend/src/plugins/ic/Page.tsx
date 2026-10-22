@@ -5,7 +5,7 @@ import { useStatus } from '@/shared/status';
 import { Button, Panel, TextInput } from '@/shared/ui';
 import { Controls } from './Controls';
 import { CropWorkspace, type CropResult } from './CropWorkspace';
-import { formatForFile, isAcceptedImage, PBC_RATIO, readImageFile, type OutputFormat } from './presets';
+import { isAcceptedImage, OUTPUT_EXTENSION, PBC_RATIO, readImageFile } from './presets';
 import { Uploader } from './Uploader';
 
 export function Page() {
@@ -18,8 +18,6 @@ export function Page() {
   const [rotation, setRotation] = useState(0);
   const [outputSize, setOutputSize] = useState('original');
   const [filename, setFilename] = useState('Cropped');
-  const [extension, setExtension] = useState('.jpg');
-  const [format, setFormat] = useState<OutputFormat>('image/jpeg');
   const [originalSize, setOriginalSize] = useState<{ width: number; height: number } | null>(null);
   const imageUrlRef = useRef<string | null>(null);
 
@@ -35,9 +33,6 @@ export function Page() {
       imageUrlRef.current = image.src;
       setImageSrc(image.src);
       setOriginalSize({ width: image.width, height: image.height });
-      const next = formatForFile(file);
-      setFormat(next.format);
-      setExtension(next.extension);
       setCropped(null);
       setToken((value) => value + 1);
       flash(t('messages.uploadSuccess'));
@@ -60,8 +55,6 @@ export function Page() {
     setRotation(0);
     setOutputSize('original');
     setFilename('Cropped');
-    setExtension('.jpg');
-    setFormat('image/jpeg');
     setOriginalSize(null);
   }
 
@@ -73,7 +66,7 @@ export function Page() {
     try {
       const href = await cropped.exportFull();
       const link = document.createElement('a');
-      link.download = `${filename}${extension}`;
+      link.download = `${filename}${OUTPUT_EXTENSION}`;
       link.href = href;
       link.click();
       window.setTimeout(() => URL.revokeObjectURL(href), 2000);
@@ -110,7 +103,6 @@ export function Page() {
                 rotation={rotation}
                 onRotationChange={setRotation}
                 outputSize={outputSize}
-                outputFormat={format}
                 onCropResultChange={setCropped}
               />
             ) : (
@@ -142,7 +134,7 @@ export function Page() {
                 <span className="font-medium">{t('actions.filename')}</span>
                 <div className="flex items-center gap-2">
                   <TextInput id="filename" value={filename} onChange={setFilename} />
-                  <span className="text-sm text-muted">{extension}</span>
+                  <span className="text-sm text-muted">{OUTPUT_EXTENSION}</span>
                 </div>
               </label>
               <Button onClick={() => void save()}>

@@ -2,7 +2,7 @@ import { useCallback, useEffect, useRef, useState } from 'react';
 import type { CropperCanvas, CropperImage, CropperSelection, CropperShade } from 'cropperjs';
 import { useTranslation } from 'react-i18next';
 import 'cropperjs';
-import type { OutputFormat } from './presets';
+import { OUTPUT_MIME, OUTPUT_QUALITY } from './presets';
 
 export type CropResult = {
   url: string;
@@ -19,7 +19,6 @@ type CropWorkspaceProps = {
   rotation: number;
   onRotationChange: (rotation: number) => void;
   outputSize: string;
-  outputFormat: OutputFormat;
   onCropResultChange: (result: CropResult | null) => void;
 };
 
@@ -99,15 +98,27 @@ function containBox(maxWidth: number, maxHeight: number, aspect: number): { widt
   return { width, height };
 }
 
-function canvasToUrl(canvas: HTMLCanvasElement, format: OutputFormat): Promise<string> {
+function canvasToUrl(canvas: HTMLCanvasElement): Promise<string> {
   return new Promise((resolve, reject) => {
-    canvas.toBlob((blob) => {
+    const flat = document.createElement('canvas');
+    flat.width = canvas.width;
+    flat.height = canvas.height;
+    const context = flat.getContext('2d');
+    if (!context) {
+      reject(new Error('encode failed'));
+      return;
+    }
+    // JPEG has no alpha. Flatten onto white so transparent pixels do not encode as black.
+    context.fillStyle = '#ffffff';
+    context.fillRect(0, 0, flat.width, flat.height);
+    context.drawImage(canvas, 0, 0);
+    flat.toBlob((blob) => {
       if (!blob) {
         reject(new Error('encode failed'));
         return;
       }
       resolve(URL.createObjectURL(blob));
-    }, format, format === 'image/png' ? undefined : 0.95);
+    }, OUTPUT_MIME, OUTPUT_QUALITY);
   });
 }
 
@@ -131,7 +142,6 @@ export function CropWorkspace({
   rotation,
   onRotationChange,
   outputSize,
-  outputFormat,
   onCropResultChange,
 }: CropWorkspaceProps) {
   const { t } = useTranslation('ic');
@@ -156,7 +166,6 @@ export function CropWorkspace({
   const rotationRef = useRef(rotation);
   const zoomRef = useRef(ZOOM_MIN);
   const outputSizeRef = useRef(outputSize);
-  const outputFormatRef = useRef(outputFormat);
   const publishRef = useRef<() => void>(() => {});
   const refitRef = useRef<(mode: 'cover' | 'keep') => void>(() => {});
   const onRotationChangeRef = useRef(onRotationChange);
@@ -166,7 +175,6 @@ export function CropWorkspace({
   rotationRef.current = rotation;
   zoomRef.current = zoom;
   outputSizeRef.current = outputSize;
-  outputFormatRef.current = outputFormat;
   onRotationChangeRef.current = onRotationChange;
 
   const selectionNaturalSize = useCallback((): { width: number; height: number } | undefined => {
@@ -194,7 +202,7 @@ export function CropWorkspace({
     if (size && (drawn.width !== size.width || drawn.height !== size.height)) {
       drawn = redraw(drawn, size);
     }
-    return canvasToUrl(drawn, outputFormatRef.current);
+    return canvasToUrl(drawn);
   }, [outputPixels]);
 
   const publish = useCallback(() => {
@@ -222,7 +230,7 @@ export function CropWorkspace({
 
     void selection.$toCanvas(preview).then(async (canvas) => {
       if (closedRef.current || request !== requestRef.current) return;
-      const url = await canvasToUrl(canvas, outputFormatRef.current);
+      const url = await canvasToUrl(canvas);
       if (closedRef.current || request !== requestRef.current) {
         URL.revokeObjectURL(url);
         return;
@@ -513,7 +521,7 @@ export function CropWorkspace({
   useEffect(() => {
     if (!readyRef.current) return;
     publishNow();
-  }, [outputFormat, outputSize, publishNow]);
+  }, [outputSize, publishNow]);
 
   const lockedAspect = aspectValue(aspectRatio);
   const frame = frameSize(Math.max(imageWidth, 1), Math.max(imageHeight, 1), rotation);

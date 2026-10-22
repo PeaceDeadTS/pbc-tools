@@ -22,18 +22,15 @@ export const OUTPUT_SIZES = [
   { value: '1600x2400', labelKey: 'size.1600x2400' },
 ] as const;
 
-export type OutputFormat = 'image/jpeg' | 'image/png' | 'image/webp';
+// PBC stores photographs as JPEG. PNG and WebP are accepted and encoded the same way.
+export const OUTPUT_MIME = 'image/jpeg';
+export const OUTPUT_QUALITY = 0.95;
+export const OUTPUT_EXTENSION = '.jpg';
 
 const ACCEPTED = new Set<string>(['image/jpeg', 'image/png', 'image/webp']);
 
 export function isAcceptedImage(file: File): boolean {
   return ACCEPTED.has(file.type);
-}
-
-export function formatForFile(file: File): { format: OutputFormat; extension: string } {
-  if (file.type === 'image/png') return { format: 'image/png', extension: '.png' };
-  if (file.type === 'image/webp') return { format: 'image/webp', extension: '.webp' };
-  return { format: 'image/jpeg', extension: '.jpg' };
 }
 
 export function readImageFile(file: File): Promise<{ src: string; width: number; height: number }> {
