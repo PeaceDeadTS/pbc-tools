@@ -1,0 +1,62 @@
+{
+  "app": {
+    "title": "Ritaglio Immagini PBC",
+    "subtitle": "Strumento di ritaglio immagini per PBC"
+  },
+  "upload": {
+    "title": "Carica immagine",
+    "dragDrop": "Trascina e rilascia qui la tua immagine",
+    "or": "oppure",
+    "browse": "Seleziona file",
+    "supported": "Formati supportati: JPG, PNG, WEBP"
+  },
+  "cropper": {
+    "original": "Immagine originale",
+    "preview": "Anteprima ritagliata",
+    "zoom": "Zoom",
+    "rotate": "Ruota",
+    "aspectRatio": "Proporzioni",
+    "pbcStandard": "Standard PBC (2:3)",
+    "freeform": "Forma libera",
+    "preset16-9": "16:9 (Widescreen)",
+    "preset4-3": "4:3 (Standard)",
+    "preset1-1": "1:1 (Quadrato)"
+  },
+  "size": {
+    "title": "Dimensione di uscita",
+    "original": "Risoluzione originale",
+    "1000x1500": "1000 × 1500 px",
+    "800x1200": "800 × 1200 px",
+    "667x1000": "667 × 1000 px",
+    "600x900": "600 × 900 px",
+    "533x800": "533 × 800 px",
+    "1200x1800": "1200 × 1800 px",
+    "1280x1920": "1280 × 1920 px",
+    "1333x2000": "1333 × 2000 px",
+    "1400x2100": "1400 × 2100 px",
+    "1600x2400": "1600 × 2400 px",
+    "current": "Risoluzione finale",
+    "pixels": "px",
+    "unavailable": "(non disponibile)"
+  },
+  "actions": {
+    "save": "Salva immagine",
+    "quickSave": "Salvataggio rapido",
+    "reset": "Reimposta",
+    "cancel": "Annulla",
+    "filename": "Nome file",
+    "defaultName": "Ritagliata"
+  },
+  "settings": {
+    "title": "Impostazioni",
+    "language": "Lingua",
+    "quality": "Qualità immagine",
+    "format": "Formato di uscita"
+  },
+  "messages": {
+    "uploadSuccess": "Immagine caricata con successo",
+    "saveSuccess": "Immagine salvata con successo",
+    "error": "Si è verificato un errore",
+    "selectImage": "Seleziona prima un'immagine"
+  }
+}

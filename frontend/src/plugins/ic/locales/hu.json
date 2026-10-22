@@ -1,0 +1,62 @@
+{
+  "app": {
+    "title": "PBC Képkivágó",
+    "subtitle": "Képkivágó eszköz PBC számára"
+  },
+  "upload": {
+    "title": "Kép feltöltése",
+    "dragDrop": "Húzza ide a képét",
+    "or": "vagy",
+    "browse": "Fájl kiválasztása",
+    "supported": "Támogatott formátumok: JPG, PNG, WEBP"
+  },
+  "cropper": {
+    "original": "Eredeti kép",
+    "preview": "Kivágott előnézet",
+    "zoom": "Nagyítás",
+    "rotate": "Forgatás",
+    "aspectRatio": "Képarány",
+    "pbcStandard": "PBC szabvány (2:3)",
+    "freeform": "Szabad forma",
+    "preset16-9": "16:9 (szélesvásznú)",
+    "preset4-3": "4:3 (standard)",
+    "preset1-1": "1:1 (négyzet)"
+  },
+  "size": {
+    "title": "Kimeneti méret",
+    "original": "Eredeti felbontás",
+    "1000x1500": "1000 × 1500 px",
+    "800x1200": "800 × 1200 px",
+    "667x1000": "667 × 1000 px",
+    "600x900": "600 × 900 px",
+    "533x800": "533 × 800 px",
+    "1200x1800": "1200 × 1800 px",
+    "1280x1920": "1280 × 1920 px",
+    "1333x2000": "1333 × 2000 px",
+    "1400x2100": "1400 × 2100 px",
+    "1600x2400": "1600 × 2400 px",
+    "current": "Végső felbontás",
+    "pixels": "px",
+    "unavailable": "(nem elérhető)"
+  },
+  "actions": {
+    "save": "Kép mentése",
+    "quickSave": "Gyors mentés",
+    "reset": "Alaphelyzet",
+    "cancel": "Mégse",
+    "filename": "Fájlnév",
+    "defaultName": "Kivágott"
+  },
+  "settings": {
+    "title": "Beállítások",
+    "language": "Nyelv",
+    "quality": "Képminőség",
+    "format": "Kimeneti formátum"
+  },
+  "messages": {
+    "uploadSuccess": "A kép sikeresen feltöltve",
+    "saveSuccess": "A kép sikeresen elmentve",
+    "error": "Hiba történt",
+    "selectImage": "Először válasszon egy képet"
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "app": {
+    "title": "PBC Görsel Kırpıcı",
+    "subtitle": "PBC için görsel kırpma aracı"
+  },
+  "upload": {
+    "title": "Görsel yükle",
+    "dragDrop": "Görselinizi buraya sürükleyip bırakın",
+    "or": "veya",
+    "browse": "Dosya seç",
+    "supported": "Desteklenen formatlar: JPG, PNG, WEBP"
+  },
+  "cropper": {
+    "original": "Orijinal görsel",
+    "preview": "Kırpılmış önizleme",
+    "zoom": "Yakınlaştır",
+    "rotate": "Döndür",
+    "aspectRatio": "En-boy oranı",
+    "pbcStandard": "PBC standardı (2:3)",
+    "freeform": "Serbest biçim",
+    "preset16-9": "16:9 (Geniş ekran)",
+    "preset4-3": "4:3 (Standart)",
+    "preset1-1": "1:1 (Kare)"
+  },
+  "size": {
+    "title": "Çıkış boyutu",
+    "original": "Orijinal çözünürlük",
+    "1000x1500": "1000 × 1500 px",
+    "800x1200": "800 × 1200 px",
+    "667x1000": "667 × 1000 px",
+    "600x900": "600 × 900 px",
+    "533x800": "533 × 800 px",
+    "1200x1800": "1200 × 1800 px",
+    "1280x1920": "1280 × 1920 px",
+    "1333x2000": "1333 × 2000 px",
+    "1400x2100": "1400 × 2100 px",
+    "1600x2400": "1600 × 2400 px",
+    "current": "Nihai çözünürlük",
+    "pixels": "px",
+    "unavailable": "(kullanılamaz)"
+  },
+  "actions": {
+    "save": "Görseli kaydet",
+    "quickSave": "Hızlı kaydet",
+    "reset": "Sıfırla",
+    "cancel": "İptal",
+    "filename": "Dosya adı",
+    "defaultName": "Kırpılmış"
+  },
+  "settings": {
+    "title": "Ayarlar",
+    "language": "Dil",
+    "quality": "Görsel kalitesi",
+    "format": "Çıkış formatı"
+  },
+  "messages": {
+    "uploadSuccess": "Görsel başarıyla yüklendi",
+    "saveSuccess": "Görsel başarıyla kaydedildi",
+    "error": "Bir hata oluştu",
+    "selectImage": "Lütfen önce bir görsel seçin"
+  }
+}

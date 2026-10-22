@@ -1,0 +1,9 @@
+{
+  "brand": "PBC Tools",
+  "tagline": "Small utilities for the wiki",
+  "language": "Language",
+  "loading": "Loading…",
+  "notFound": "This page is not a tool.",
+  "requestFailed": "The request did not go through. Try again.",
+  "invalidRequest": "Check the fields and try again."
+}

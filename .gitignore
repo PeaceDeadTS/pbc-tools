@@ -1,0 +1,14 @@
+node_modules/
+frontend/dist/
+frontend/node_modules/
+venv/
+backend/.venv/
+__pycache__/
+.pytest_cache/
+*.py[cod]
+.codegraph/
+.cursor/
+local/
+.env
+*.log
+.DS_Store

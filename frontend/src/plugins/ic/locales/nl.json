@@ -1,0 +1,62 @@
+{
+  "app": {
+    "title": "PBC Afbeeldingsbijsnijden",
+    "subtitle": "Afbeeldingsbijsnijdtool voor PBC"
+  },
+  "upload": {
+    "title": "Afbeelding uploaden",
+    "dragDrop": "Sleep je afbeelding hierheen",
+    "or": "of",
+    "browse": "Bestand kiezen",
+    "supported": "Ondersteunde formaten: JPG, PNG, WEBP"
+  },
+  "cropper": {
+    "original": "Originele afbeelding",
+    "preview": "Bijsneden voorbeeld",
+    "zoom": "Zoom",
+    "rotate": "Draaien",
+    "aspectRatio": "Beeldverhouding",
+    "pbcStandard": "PBC-standaard (2:3)",
+    "freeform": "Vrij formaat",
+    "preset16-9": "16:9 (breedbeeld)",
+    "preset4-3": "4:3 (standaard)",
+    "preset1-1": "1:1 (vierkant)"
+  },
+  "size": {
+    "title": "Uitvoergrootte",
+    "original": "Oorspronkelijke resolutie",
+    "1000x1500": "1000 × 1500 px",
+    "800x1200": "800 × 1200 px",
+    "667x1000": "667 × 1000 px",
+    "600x900": "600 × 900 px",
+    "533x800": "533 × 800 px",
+    "1200x1800": "1200 × 1800 px",
+    "1280x1920": "1280 × 1920 px",
+    "1333x2000": "1333 × 2000 px",
+    "1400x2100": "1400 × 2100 px",
+    "1600x2400": "1600 × 2400 px",
+    "current": "Eindresolutie",
+    "pixels": "px",
+    "unavailable": "(niet beschikbaar)"
+  },
+  "actions": {
+    "save": "Afbeelding opslaan",
+    "quickSave": "Snel opslaan",
+    "reset": "Resetten",
+    "cancel": "Annuleren",
+    "filename": "Bestandsnaam",
+    "defaultName": "Bijsneden"
+  },
+  "settings": {
+    "title": "Instellingen",
+    "language": "Taal",
+    "quality": "Afbeeldingskwaliteit",
+    "format": "Uitvoerformaat"
+  },
+  "messages": {
+    "uploadSuccess": "Afbeelding succesvol geüpload",
+    "saveSuccess": "Afbeelding succesvol opgeslagen",
+    "error": "Er is een fout opgetreden",
+    "selectImage": "Selecteer eerst een afbeelding"
+  }
+}

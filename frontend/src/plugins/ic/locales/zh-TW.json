@@ -1,0 +1,62 @@
+{
+  "app": {
+    "title": "PBC 圖片裁切器",
+    "subtitle": "用於 PBC 的圖片裁切工具"
+  },
+  "upload": {
+    "title": "上傳圖片",
+    "dragDrop": "將圖片拖曳到此處",
+    "or": "或",
+    "browse": "選擇檔案",
+    "supported": "支援的格式：JPG、PNG、WEBP"
+  },
+  "cropper": {
+    "original": "原始圖片",
+    "preview": "裁切預覽",
+    "zoom": "縮放",
+    "rotate": "旋轉",
+    "aspectRatio": "長寬比",
+    "pbcStandard": "PBC 標準 (2:3)",
+    "freeform": "自由比例",
+    "preset16-9": "16:9（寬螢幕）",
+    "preset4-3": "4:3（標準）",
+    "preset1-1": "1:1（正方形）"
+  },
+  "size": {
+    "title": "輸出尺寸",
+    "original": "原始解析度",
+    "1000x1500": "1000 × 1500 像素",
+    "800x1200": "800 × 1200 像素",
+    "667x1000": "667 × 1000 像素",
+    "600x900": "600 × 900 像素",
+    "533x800": "533 × 800 像素",
+    "1200x1800": "1200 × 1800 像素",
+    "1280x1920": "1280 × 1920 像素",
+    "1333x2000": "1333 × 2000 像素",
+    "1400x2100": "1400 × 2100 像素",
+    "1600x2400": "1600 × 2400 像素",
+    "current": "最終解析度",
+    "pixels": "像素",
+    "unavailable": "（不可用）"
+  },
+  "actions": {
+    "save": "儲存圖片",
+    "quickSave": "快速儲存",
+    "reset": "重設",
+    "cancel": "取消",
+    "filename": "檔名",
+    "defaultName": "已裁切"
+  },
+  "settings": {
+    "title": "設定",
+    "language": "語言",
+    "quality": "圖片品質",
+    "format": "輸出格式"
+  },
+  "messages": {
+    "uploadSuccess": "圖片上傳成功",
+    "saveSuccess": "圖片儲存成功",
+    "error": "發生錯誤",
+    "selectImage": "請先選擇一張圖片"
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "app": {
+    "title": "PBC Công Cụ Cắt Ảnh",
+    "subtitle": "Công cụ cắt ảnh cho PBC"
+  },
+  "upload": {
+    "title": "Tải ảnh lên",
+    "dragDrop": "Kéo và thả ảnh của bạn vào đây",
+    "or": "hoặc",
+    "browse": "Chọn tệp",
+    "supported": "Định dạng hỗ trợ: JPG, PNG, WEBP"
+  },
+  "cropper": {
+    "original": "Ảnh gốc",
+    "preview": "Xem trước sau khi cắt",
+    "zoom": "Thu phóng",
+    "rotate": "Xoay",
+    "aspectRatio": "Tỷ lệ khung hình",
+    "pbcStandard": "Tiêu chuẩn PBC (2:3)",
+    "freeform": "Tự do",
+    "preset16-9": "16:9 (Màn hình rộng)",
+    "preset4-3": "4:3 (Chuẩn)",
+    "preset1-1": "1:1 (Vuông)"
+  },
+  "size": {
+    "title": "Kích thước xuất",
+    "original": "Độ phân giải gốc",
+    "1000x1500": "1000 × 1500 px",
+    "800x1200": "800 × 1200 px",
+    "667x1000": "667 × 1000 px",
+    "600x900": "600 × 900 px",
+    "533x800": "533 × 800 px",
+    "1200x1800": "1200 × 1800 px",
+    "1280x1920": "1280 × 1920 px",
+    "1333x2000": "1333 × 2000 px",
+    "1400x2100": "1400 × 2100 px",
+    "1600x2400": "1600 × 2400 px",
+    "current": "Độ phân giải cuối cùng",
+    "pixels": "px",
+    "unavailable": "(không khả dụng)"
+  },
+  "actions": {
+    "save": "Lưu ảnh",
+    "quickSave": "Lưu nhanh",
+    "reset": "Đặt lại",
+    "cancel": "Hủy",
+    "filename": "Tên tệp",
+    "defaultName": "Đã cắt"
+  },
+  "settings": {
+    "title": "Cài đặt",
+    "language": "Ngôn ngữ",
+    "quality": "Chất lượng ảnh",
+    "format": "Định dạng xuất"
+  },
+  "messages": {
+    "uploadSuccess": "Tải ảnh lên thành công",
+    "saveSuccess": "Lưu ảnh thành công",
+    "error": "Đã xảy ra lỗi",
+    "selectImage": "Vui lòng chọn một ảnh trước"
+  }
+}

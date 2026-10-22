@@ -1,0 +1,62 @@
+{
+  "app": {
+    "title": "PBC Bildzuschnitt",
+    "subtitle": "Bildzuschnitt-Tool für PBC"
+  },
+  "upload": {
+    "title": "Bild hochladen",
+    "dragDrop": "Ziehen Sie Ihr Bild hierher",
+    "or": "oder",
+    "browse": "Datei auswählen",
+    "supported": "Unterstützte Formate: JPG, PNG, WEBP"
+  },
+  "cropper": {
+    "original": "Originalbild",
+    "preview": "Zugeschnittene Vorschau",
+    "zoom": "Zoom",
+    "rotate": "Drehen",
+    "aspectRatio": "Seitenverhältnis",
+    "pbcStandard": "PBC-Standard (2:3)",
+    "freeform": "Freie Form",
+    "preset16-9": "16:9 (Breitbild)",
+    "preset4-3": "4:3 (Standard)",
+    "preset1-1": "1:1 (Quadrat)"
+  },
+  "size": {
+    "title": "Ausgabegröße",
+    "original": "Originalauflösung",
+    "1000x1500": "1000 × 1500 px",
+    "800x1200": "800 × 1200 px",
+    "667x1000": "667 × 1000 px",
+    "600x900": "600 × 900 px",
+    "533x800": "533 × 800 px",
+    "1200x1800": "1200 × 1800 px",
+    "1280x1920": "1280 × 1920 px",
+    "1333x2000": "1333 × 2000 px",
+    "1400x2100": "1400 × 2100 px",
+    "1600x2400": "1600 × 2400 px",
+    "current": "Endauflösung",
+    "pixels": "px",
+    "unavailable": "(nicht verfügbar)"
+  },
+  "actions": {
+    "save": "Bild speichern",
+    "quickSave": "Schnellspeichern",
+    "reset": "Zurücksetzen",
+    "cancel": "Abbrechen",
+    "filename": "Dateiname",
+    "defaultName": "Zugeschnitten"
+  },
+  "settings": {
+    "title": "Einstellungen",
+    "language": "Sprache",
+    "quality": "Bildqualität",
+    "format": "Ausgabeformat"
+  },
+  "messages": {
+    "uploadSuccess": "Bild erfolgreich hochgeladen",
+    "saveSuccess": "Bild erfolgreich gespeichert",
+    "error": "Es ist ein Fehler aufgetreten",
+    "selectImage": "Bitte wählen Sie zuerst ein Bild aus"
+  }
+}

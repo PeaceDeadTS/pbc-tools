@@ -1,0 +1,12 @@
+[
+  {
+    "id": "fn",
+    "path": "/fn",
+    "titleKey": "title"
+  },
+  {
+    "id": "ic",
+    "path": "/ic",
+    "titleKey": "app.title"
+  }
+]

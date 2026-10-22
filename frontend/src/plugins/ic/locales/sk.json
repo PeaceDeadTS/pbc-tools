@@ -1,0 +1,62 @@
+{
+  "app": {
+    "title": "PBC Orezávanie obrázkov",
+    "subtitle": "Nástroj na orezávanie obrázkov pre PBC"
+  },
+  "upload": {
+    "title": "Nahrať obrázok",
+    "dragDrop": "Presuňte sem svoj obrázok",
+    "or": "alebo",
+    "browse": "Vybrať súbor",
+    "supported": "Podporované formáty: JPG, PNG, WEBP"
+  },
+  "cropper": {
+    "original": "Pôvodný obrázok",
+    "preview": "Náhľad orezania",
+    "zoom": "Priblíženie",
+    "rotate": "Otočiť",
+    "aspectRatio": "Pomer strán",
+    "pbcStandard": "PBC štandard (2:3)",
+    "freeform": "Voľný tvar",
+    "preset16-9": "16:9 (širokouhlý)",
+    "preset4-3": "4:3 (štandardný)",
+    "preset1-1": "1:1 (štvorec)"
+  },
+  "size": {
+    "title": "Výstupná veľkosť",
+    "original": "Pôvodné rozlíšenie",
+    "1000x1500": "1000 × 1500 px",
+    "800x1200": "800 × 1200 px",
+    "667x1000": "667 × 1000 px",
+    "600x900": "600 × 900 px",
+    "533x800": "533 × 800 px",
+    "1200x1800": "1200 × 1800 px",
+    "1280x1920": "1280 × 1920 px",
+    "1333x2000": "1333 × 2000 px",
+    "1400x2100": "1400 × 2100 px",
+    "1600x2400": "1600 × 2400 px",
+    "current": "Konečné rozlíšenie",
+    "pixels": "px",
+    "unavailable": "(nedostupné)"
+  },
+  "actions": {
+    "save": "Uložiť obrázok",
+    "quickSave": "Rýchle uloženie",
+    "reset": "Resetovať",
+    "cancel": "Zrušiť",
+    "filename": "Názov súboru",
+    "defaultName": "Orezané"
+  },
+  "settings": {
+    "title": "Nastavenia",
+    "language": "Jazyk",
+    "quality": "Kvalita obrázka",
+    "format": "Výstupný formát"
+  },
+  "messages": {
+    "uploadSuccess": "Obrázok bol úspešne nahraný",
+    "saveSuccess": "Obrázok bol úspešne uložený",
+    "error": "Vyskytla sa chyba",
+    "selectImage": "Najprv prosím vyberte obrázok"
+  }
+}

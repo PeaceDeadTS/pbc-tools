@@ -1,0 +1,62 @@
+{
+  "app": {
+    "title": "PBC-kuvankroppaus",
+    "subtitle": "Kuvien rajaus työkalu PBC:lle"
+  },
+  "upload": {
+    "title": "Lataa kuva",
+    "dragDrop": "Vedä ja pudota kuvasi tähän",
+    "or": "tai",
+    "browse": "Valitse tiedosto",
+    "supported": "Tuetut muodot: JPG, PNG, WEBP"
+  },
+  "cropper": {
+    "original": "Alkuperäinen kuva",
+    "preview": "Rajattu esikatselu",
+    "zoom": "Zoom",
+    "rotate": "Kierrä",
+    "aspectRatio": "Kuvasuhde",
+    "pbcStandard": "PBC-standardi (2:3)",
+    "freeform": "Vapaa muoto",
+    "preset16-9": "16:9 (Laajakuva)",
+    "preset4-3": "4:3 (Vakio)",
+    "preset1-1": "1:1 (Neliö)"
+  },
+  "size": {
+    "title": "Tulostekoko",
+    "original": "Alkuperäinen resoluutio",
+    "1000x1500": "1000 × 1500 px",
+    "800x1200": "800 × 1200 px",
+    "667x1000": "667 × 1000 px",
+    "600x900": "600 × 900 px",
+    "533x800": "533 × 800 px",
+    "1200x1800": "1200 × 1800 px",
+    "1280x1920": "1280 × 1920 px",
+    "1333x2000": "1333 × 2000 px",
+    "1400x2100": "1400 × 2100 px",
+    "1600x2400": "1600 × 2400 px",
+    "current": "Lopullinen resoluutio",
+    "pixels": "px",
+    "unavailable": "(ei saatavilla)"
+  },
+  "actions": {
+    "save": "Tallenna kuva",
+    "quickSave": "Pikatallennus",
+    "reset": "Palauta",
+    "cancel": "Peruuta",
+    "filename": "Tiedostonimi",
+    "defaultName": "Rajattu"
+  },
+  "settings": {
+    "title": "Asetukset",
+    "language": "Kieli",
+    "quality": "Kuvan laatu",
+    "format": "Tulostusmuoto"
+  },
+  "messages": {
+    "uploadSuccess": "Kuva ladattu onnistuneesti",
+    "saveSuccess": "Kuva tallennettu onnistuneesti",
+    "error": "Tapahtui virhe",
+    "selectImage": "Valitse ensin kuva"
+  }
+}

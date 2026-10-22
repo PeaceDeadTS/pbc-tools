@@ -1,0 +1,62 @@
+{
+  "app": {
+    "title": "PBC 画像トリミング",
+    "subtitle": "PBC 用画像トリミングツール"
+  },
+  "upload": {
+    "title": "画像をアップロード",
+    "dragDrop": "ここに画像をドラッグ＆ドロップしてください",
+    "or": "または",
+    "browse": "ファイルを選択",
+    "supported": "対応形式: JPG, PNG, WEBP"
+  },
+  "cropper": {
+    "original": "元の画像",
+    "preview": "トリミング後のプレビュー",
+    "zoom": "ズーム",
+    "rotate": "回転",
+    "aspectRatio": "アスペクト比",
+    "pbcStandard": "PBC 標準 (2:3)",
+    "freeform": "フリーフォーム",
+    "preset16-9": "16:9 (ワイドスクリーン)",
+    "preset4-3": "4:3 (標準)",
+    "preset1-1": "1:1 (正方形)"
+  },
+  "size": {
+    "title": "出力サイズ",
+    "original": "元の解像度",
+    "1000x1500": "1000 × 1500 px",
+    "800x1200": "800 × 1200 px",
+    "667x1000": "667 × 1000 px",
+    "600x900": "600 × 900 px",
+    "533x800": "533 × 800 px",
+    "1200x1800": "1200 × 1800 px",
+    "1280x1920": "1280 × 1920 px",
+    "1333x2000": "1333 × 2000 px",
+    "1400x2100": "1400 × 2100 px",
+    "1600x2400": "1600 × 2400 px",
+    "current": "最終解像度",
+    "pixels": "px",
+    "unavailable": "(利用不可)"
+  },
+  "actions": {
+    "save": "画像を保存",
+    "quickSave": "クイック保存",
+    "reset": "リセット",
+    "cancel": "キャンセル",
+    "filename": "ファイル名",
+    "defaultName": "トリミング"
+  },
+  "settings": {
+    "title": "設定",
+    "language": "言語",
+    "quality": "画像品質",
+    "format": "出力形式"
+  },
+  "messages": {
+    "uploadSuccess": "画像をアップロードしました",
+    "saveSuccess": "画像を保存しました",
+    "error": "エラーが発生しました",
+    "selectImage": "まず画像を選択してください"
+  }
+}

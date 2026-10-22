@@ -1,0 +1,62 @@
+{
+  "app": {
+    "title": "Recortador de Imágenes PBC",
+    "subtitle": "Herramienta de recorte de imágenes para PBC"
+  },
+  "upload": {
+    "title": "Subir imagen",
+    "dragDrop": "Arrastra y suelta tu imagen aquí",
+    "or": "o",
+    "browse": "Seleccionar archivo",
+    "supported": "Formatos compatibles: JPG, PNG, WEBP"
+  },
+  "cropper": {
+    "original": "Imagen original",
+    "preview": "Vista previa recortada",
+    "zoom": "Zoom",
+    "rotate": "Girar",
+    "aspectRatio": "Relación de aspecto",
+    "pbcStandard": "Estándar PBC (2:3)",
+    "freeform": "Forma libre",
+    "preset16-9": "16:9 (Panorámico)",
+    "preset4-3": "4:3 (Estándar)",
+    "preset1-1": "1:1 (Cuadrado)"
+  },
+  "size": {
+    "title": "Tamaño de salida",
+    "original": "Resolución original",
+    "1000x1500": "1000 × 1500 px",
+    "800x1200": "800 × 1200 px",
+    "667x1000": "667 × 1000 px",
+    "600x900": "600 × 900 px",
+    "533x800": "533 × 800 px",
+    "1200x1800": "1200 × 1800 px",
+    "1280x1920": "1280 × 1920 px",
+    "1333x2000": "1333 × 2000 px",
+    "1400x2100": "1400 × 2100 px",
+    "1600x2400": "1600 × 2400 px",
+    "current": "Resolución final",
+    "pixels": "px",
+    "unavailable": "(no disponible)"
+  },
+  "actions": {
+    "save": "Guardar imagen",
+    "quickSave": "Guardado rápido",
+    "reset": "Restablecer",
+    "cancel": "Cancelar",
+    "filename": "Nombre de archivo",
+    "defaultName": "Recortada"
+  },
+  "settings": {
+    "title": "Configuración",
+    "language": "Idioma",
+    "quality": "Calidad de imagen",
+    "format": "Formato de salida"
+  },
+  "messages": {
+    "uploadSuccess": "Imagen subida correctamente",
+    "saveSuccess": "Imagen guardada correctamente",
+    "error": "Se ha producido un error",
+    "selectImage": "Por favor, selecciona primero una imagen"
+  }
+}

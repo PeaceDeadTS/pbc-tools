@@ -1,0 +1,62 @@
+{
+  "app": {
+    "title": "Recadrage d'Images PBC",
+    "subtitle": "Outil de recadrage d'images pour PBC"
+  },
+  "upload": {
+    "title": "Téléverser une image",
+    "dragDrop": "Glissez-déposez votre image ici",
+    "or": "ou",
+    "browse": "Choisir un fichier",
+    "supported": "Formats pris en charge : JPG, PNG, WEBP"
+  },
+  "cropper": {
+    "original": "Image d'origine",
+    "preview": "Aperçu recadré",
+    "zoom": "Zoom",
+    "rotate": "Rotation",
+    "aspectRatio": "Rapport hauteur/largeur",
+    "pbcStandard": "Standard PBC (2:3)",
+    "freeform": "Forme libre",
+    "preset16-9": "16:9 (Panoramique)",
+    "preset4-3": "4:3 (Standard)",
+    "preset1-1": "1:1 (Carré)"
+  },
+  "size": {
+    "title": "Taille de sortie",
+    "original": "Résolution d'origine",
+    "1000x1500": "1000 × 1500 px",
+    "800x1200": "800 × 1200 px",
+    "667x1000": "667 × 1000 px",
+    "600x900": "600 × 900 px",
+    "533x800": "533 × 800 px",
+    "1200x1800": "1200 × 1800 px",
+    "1280x1920": "1280 × 1920 px",
+    "1333x2000": "1333 × 2000 px",
+    "1400x2100": "1400 × 2100 px",
+    "1600x2400": "1600 × 2400 px",
+    "current": "Résolution finale",
+    "pixels": "px",
+    "unavailable": "(indisponible)"
+  },
+  "actions": {
+    "save": "Enregistrer l'image",
+    "quickSave": "Enregistrement rapide",
+    "reset": "Réinitialiser",
+    "cancel": "Annuler",
+    "filename": "Nom du fichier",
+    "defaultName": "Recadrée"
+  },
+  "settings": {
+    "title": "Paramètres",
+    "language": "Langue",
+    "quality": "Qualité de l'image",
+    "format": "Format de sortie"
+  },
+  "messages": {
+    "uploadSuccess": "Image téléversée avec succès",
+    "saveSuccess": "Image enregistrée avec succès",
+    "error": "Une erreur s'est produite",
+    "selectImage": "Veuillez d'abord sélectionner une image"
+  }
+}

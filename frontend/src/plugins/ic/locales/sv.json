@@ -1,0 +1,62 @@
+{
+  "app": {
+    "title": "PBC Bildbeskärare",
+    "subtitle": "Bildbeskärningsverktyg för PBC"
+  },
+  "upload": {
+    "title": "Ladda upp bild",
+    "dragDrop": "Dra och släpp din bild här",
+    "or": "eller",
+    "browse": "Välj fil",
+    "supported": "Format som stöds: JPG, PNG, WEBP"
+  },
+  "cropper": {
+    "original": "Originalbild",
+    "preview": "Beskuren förhandsvisning",
+    "zoom": "Zoom",
+    "rotate": "Rotera",
+    "aspectRatio": "Bildförhållande",
+    "pbcStandard": "PBC-standard (2:3)",
+    "freeform": "Fritt format",
+    "preset16-9": "16:9 (Widescreen)",
+    "preset4-3": "4:3 (Standard)",
+    "preset1-1": "1:1 (Kvadrat)"
+  },
+  "size": {
+    "title": "Utgångsstorlek",
+    "original": "Ursprunglig upplösning",
+    "1000x1500": "1000 × 1500 px",
+    "800x1200": "800 × 1200 px",
+    "667x1000": "667 × 1000 px",
+    "600x900": "600 × 900 px",
+    "533x800": "533 × 800 px",
+    "1200x1800": "1200 × 1800 px",
+    "1280x1920": "1280 × 1920 px",
+    "1333x2000": "1333 × 2000 px",
+    "1400x2100": "1400 × 2100 px",
+    "1600x2400": "1600 × 2400 px",
+    "current": "Slutlig upplösning",
+    "pixels": "px",
+    "unavailable": "(inte tillgänglig)"
+  },
+  "actions": {
+    "save": "Spara bild",
+    "quickSave": "Snabbspara",
+    "reset": "Återställ",
+    "cancel": "Avbryt",
+    "filename": "Filnamn",
+    "defaultName": "Beskuren"
+  },
+  "settings": {
+    "title": "Inställningar",
+    "language": "Språk",
+    "quality": "Bildkvalitet",
+    "format": "Utdataformat"
+  },
+  "messages": {
+    "uploadSuccess": "Bilden har laddats upp",
+    "saveSuccess": "Bilden har sparats",
+    "error": "Ett fel uppstod",
+    "selectImage": "Välj en bild först"
+  }
+}

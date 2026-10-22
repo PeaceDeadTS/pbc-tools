@@ -1,0 +1,62 @@
+{
+  "app": {
+    "title": "PBC 图片裁剪器",
+    "subtitle": "用于 PBC 的图片裁剪工具"
+  },
+  "upload": {
+    "title": "上传图片",
+    "dragDrop": "将图片拖拽到此处",
+    "or": "或",
+    "browse": "选择文件",
+    "supported": "支持的格式：JPG、PNG、WEBP"
+  },
+  "cropper": {
+    "original": "原始图片",
+    "preview": "裁剪预览",
+    "zoom": "缩放",
+    "rotate": "旋转",
+    "aspectRatio": "长宽比",
+    "pbcStandard": "PBC 标准 (2:3)",
+    "freeform": "自由比例",
+    "preset16-9": "16:9（宽屏）",
+    "preset4-3": "4:3（标准）",
+    "preset1-1": "1:1（正方形）"
+  },
+  "size": {
+    "title": "输出尺寸",
+    "original": "原始分辨率",
+    "1000x1500": "1000 × 1500 像素",
+    "800x1200": "800 × 1200 像素",
+    "667x1000": "667 × 1000 像素",
+    "600x900": "600 × 900 像素",
+    "533x800": "533 × 800 像素",
+    "1200x1800": "1200 × 1800 像素",
+    "1280x1920": "1280 × 1920 像素",
+    "1333x2000": "1333 × 2000 像素",
+    "1400x2100": "1400 × 2100 像素",
+    "1600x2400": "1600 × 2400 像素",
+    "current": "最终分辨率",
+    "pixels": "像素",
+    "unavailable": "（不可用）"
+  },
+  "actions": {
+    "save": "保存图片",
+    "quickSave": "快速保存",
+    "reset": "重置",
+    "cancel": "取消",
+    "filename": "文件名",
+    "defaultName": "已裁剪"
+  },
+  "settings": {
+    "title": "设置",
+    "language": "语言",
+    "quality": "图片质量",
+    "format": "输出格式"
+  },
+  "messages": {
+    "uploadSuccess": "图片上传成功",
+    "saveSuccess": "图片保存成功",
+    "error": "发生错误",
+    "selectImage": "请先选择一张图片"
+  }
+}

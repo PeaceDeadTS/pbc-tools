@@ -1,0 +1,11 @@
+{
+  "exclude": [
+    "frontend/node_modules/",
+    "frontend/dist/",
+    "venv/",
+    "backend/.venv/",
+    "local/",
+    ".pytest_cache/",
+    "**/__pycache__/"
+  ]
+}

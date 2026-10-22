@@ -1,0 +1,62 @@
+{
+  "app": {
+    "title": "PBC Ořez obrázků",
+    "subtitle": "Nástroj pro ořez obrázků pro PBC"
+  },
+  "upload": {
+    "title": "Nahrát obrázek",
+    "dragDrop": "Přetáhněte sem svůj obrázek",
+    "or": "nebo",
+    "browse": "Vybrat soubor",
+    "supported": "Podporované formáty: JPG, PNG, WEBP"
+  },
+  "cropper": {
+    "original": "Původní obrázek",
+    "preview": "Náhled ořezu",
+    "zoom": "Přiblížení",
+    "rotate": "Otočit",
+    "aspectRatio": "Poměr stran",
+    "pbcStandard": "PBC standard (2:3)",
+    "freeform": "Volný tvar",
+    "preset16-9": "16:9 (širokoúhlý)",
+    "preset4-3": "4:3 (standardní)",
+    "preset1-1": "1:1 (čtverec)"
+  },
+  "size": {
+    "title": "Výstupní velikost",
+    "original": "Původní rozlišení",
+    "1000x1500": "1000 × 1500 px",
+    "800x1200": "800 × 1200 px",
+    "667x1000": "667 × 1000 px",
+    "600x900": "600 × 900 px",
+    "533x800": "533 × 800 px",
+    "1200x1800": "1200 × 1800 px",
+    "1280x1920": "1280 × 1920 px",
+    "1333x2000": "1333 × 2000 px",
+    "1400x2100": "1400 × 2100 px",
+    "1600x2400": "1600 × 2400 px",
+    "current": "Konečné rozlišení",
+    "pixels": "px",
+    "unavailable": "(nedostupné)"
+  },
+  "actions": {
+    "save": "Uložit obrázek",
+    "quickSave": "Rychlé uložení",
+    "reset": "Resetovat",
+    "cancel": "Zrušit",
+    "filename": "Název souboru",
+    "defaultName": "Oříznuto"
+  },
+  "settings": {
+    "title": "Nastavení",
+    "language": "Jazyk",
+    "quality": "Kvalita obrázku",
+    "format": "Výstupní formát"
+  },
+  "messages": {
+    "uploadSuccess": "Obrázek byl úspěšně nahrán",
+    "saveSuccess": "Obrázek byl úspěšně uložen",
+    "error": "Došlo k chybě",
+    "selectImage": "Nejprve prosím vyberte obrázek"
+  }
+}
