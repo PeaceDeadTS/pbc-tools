@@ -1,4 +1,4 @@
-import { useCallback, useState } from 'react';
+import { useCallback, useEffect, useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { IconDownload } from '@/shared/icons';
 import { useStatus } from '@/shared/status';
@@ -20,19 +20,30 @@ export function Page() {
   const [filename, setFilename] = useState('Cropped');
   const [extension, setExtension] = useState('.jpg');
   const [format, setFormat] = useState<OutputFormat>('image/jpeg');
-  const [originalHeight, setOriginalHeight] = useState<number | null>(null);
+  const [originalSize, setOriginalSize] = useState<{ width: number; height: number } | null>(null);
+  const imageUrlRef = useRef<string | null>(null);
+
+  useEffect(() => () => {
+    if (imageUrlRef.current) URL.revokeObjectURL(imageUrlRef.current);
+  }, []);
 
   const onFile = useCallback(async (file: File) => {
     if (!isAcceptedImage(file)) return;
-    const image = await readImageFile(file);
-    const next = formatForFile(file);
-    setImageSrc(image.src);
-    setOriginalHeight(image.height);
-    setFormat(next.format);
-    setExtension(next.extension);
-    setCropped(null);
-    setToken((value) => value + 1);
-    flash(t('messages.uploadSuccess'));
+    try {
+      const image = await readImageFile(file);
+      if (imageUrlRef.current) URL.revokeObjectURL(imageUrlRef.current);
+      imageUrlRef.current = image.src;
+      setImageSrc(image.src);
+      setOriginalSize({ width: image.width, height: image.height });
+      const next = formatForFile(file);
+      setFormat(next.format);
+      setExtension(next.extension);
+      setCropped(null);
+      setToken((value) => value + 1);
+      flash(t('messages.uploadSuccess'));
+    } catch {
+      flash(t('messages.error'));
+    }
   }, [flash, t]);
 
   function changeAspect(next: number) {
@@ -41,6 +52,8 @@ export function Page() {
   }
 
   function reset() {
+    if (imageUrlRef.current) URL.revokeObjectURL(imageUrlRef.current);
+    imageUrlRef.current = null;
     setImageSrc(null);
     setCropped(null);
     setAspectRatio(PBC_RATIO);
@@ -49,19 +62,25 @@ export function Page() {
     setFilename('Cropped');
     setExtension('.jpg');
     setFormat('image/jpeg');
-    setOriginalHeight(null);
+    setOriginalSize(null);
   }
 
-  function save() {
+  async function save() {
     if (!cropped) {
       flash(t('messages.selectImage'));
       return;
     }
-    const link = document.createElement('a');
-    link.download = `${filename}${extension}`;
-    link.href = cropped.url;
-    link.click();
-    flash(t('messages.saveSuccess'));
+    try {
+      const href = await cropped.exportFull();
+      const link = document.createElement('a');
+      link.download = `${filename}${extension}`;
+      link.href = href;
+      link.click();
+      window.setTimeout(() => URL.revokeObjectURL(href), 2000);
+      flash(t('messages.saveSuccess'));
+    } catch {
+      flash(t('messages.error'));
+    }
   }
 
   return (
@@ -85,6 +104,8 @@ export function Page() {
               <CropWorkspace
                 key={token}
                 imageSrc={imageSrc}
+                imageWidth={originalSize?.width ?? 0}
+                imageHeight={originalSize?.height ?? 0}
                 aspectRatio={aspectRatio === 0 ? undefined : aspectRatio}
                 rotation={rotation}
                 onRotationChange={setRotation}
@@ -124,7 +145,7 @@ export function Page() {
                   <span className="text-sm text-muted">{extension}</span>
                 </div>
               </label>
-              <Button onClick={save}>
+              <Button onClick={() => void save()}>
                 <IconDownload />
                 {t('actions.save')}
               </Button>
@@ -140,7 +161,7 @@ export function Page() {
             onRotationChange={setRotation}
             outputSize={outputSize}
             onOutputSizeChange={setOutputSize}
-            originalImageHeight={originalHeight}
+            originalImageHeight={originalSize?.height ?? null}
           />
         </div>
       </div>

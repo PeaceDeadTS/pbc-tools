@@ -42,6 +42,7 @@ declare module 'react' {
         initialAspectRatio?: number;
         initialCoverage?: number;
         keyboard?: boolean;
+        minInset?: string;
         movable?: boolean;
         outlined?: boolean;
         precise?: boolean;

@@ -37,20 +37,14 @@ export function formatForFile(file: File): { format: OutputFormat; extension: st
 }
 
 export function readImageFile(file: File): Promise<{ src: string; width: number; height: number }> {
+  const src = URL.createObjectURL(file);
   return new Promise((resolve, reject) => {
-    const reader = new FileReader();
-    reader.addEventListener('error', () => reject(new Error('read failed')));
-    reader.addEventListener('load', () => {
-      const src = reader.result;
-      if (typeof src !== 'string') {
-        reject(new Error('read failed'));
-        return;
-      }
-      const image = new Image();
-      image.onload = () => resolve({ src, width: image.width, height: image.height });
-      image.onerror = () => reject(new Error('decode failed'));
-      image.src = src;
-    });
-    reader.readAsDataURL(file);
+    const image = new Image();
+    image.onload = () => resolve({ src, width: image.width, height: image.height });
+    image.onerror = () => {
+      URL.revokeObjectURL(src);
+      reject(new Error('decode failed'));
+    };
+    image.src = src;
   });
 }
