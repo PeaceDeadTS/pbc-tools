@@ -71,7 +71,7 @@ export function Controls({
           <span className="font-medium">{t('cropper.rotate')}</span>
           <Button tone="ghost" onClick={() => onRotationChange((rotation + 90) % 360)}>
             <IconRotate />
-            {rotation}°
+            {Math.round(rotation) % 360}°
           </Button>
         </div>
       </div>

@@ -87,6 +87,7 @@ export function Page() {
                 imageSrc={imageSrc}
                 aspectRatio={aspectRatio === 0 ? undefined : aspectRatio}
                 rotation={rotation}
+                onRotationChange={setRotation}
                 outputSize={outputSize}
                 outputFormat={format}
                 onCropResultChange={setCropped}

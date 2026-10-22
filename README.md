@@ -15,7 +15,7 @@ Cropping runs in the browser. The gallery generator is `POST /api/fn/gallery`. S
 
 - React 19.3, React Router 8, Vite 8, Tailwind CSS 4
 - TypeScript 6.0.3. `typescript-eslint` 8.72 accepts only versions below 6.1
-- `cropperjs` 1.7. `react-cropper` does not work with `cropperjs` 2
+- `cropperjs` 2.3, used as custom elements. There is no React wrapper
 - FastAPI 0.159, uvicorn 0.54, Python 3.11+
 
 ## Run
